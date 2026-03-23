@@ -1,0 +1,87 @@
+---
+import { gigs } from "../data/gigs.js";
+
+// Always counts down to the first gig in the array
+const next = gigs[0];
+const targetDate = `${next.date}T00:00:00`;
+
+const units = [
+  { key: "days",  label: "Days"  },
+  { key: "hours", label: "Hours" },
+  { key: "mins",  label: "Mins"  },
+  { key: "secs",  label: "Secs"  },
+];
+---
+
+<div class="bg-surface-container border-y border-outline-variant/20 px-8 md:px-24 py-8">
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
+
+    <!-- Label + venue -->
+    <div>
+      <p class="font-headline text-[10px] uppercase tracking-[0.35em] text-secondary mb-2">
+        Next Show
+      </p>
+      <p class="font-headline text-base md:text-lg uppercase tracking-widest text-white">
+        {next.venue} &middot; {next.city}, {next.country}
+      </p>
+    </div>
+
+    <!-- Countdown units -->
+    <div class="flex items-end gap-6 md:gap-10">
+      {units.map(({ key, label }) => (
+        <div class="flex flex-col items-center gap-1">
+          <span
+            data-countdown={key}
+            class="font-headline text-5xl md:text-6xl text-white leading-none tabular-nums"
+          >
+            00
+          </span>
+          <span class="font-headline text-[9px] uppercase tracking-[0.25em] text-on-surface-variant">
+            {label}
+          </span>
+        </div>
+      ))}
+    </div>
+
+    <!-- Ticket CTA -->
+    <a
+      href={next.ticketUrl ?? "#"}
+      class="shrink-0 self-start md:self-auto font-headline text-xs uppercase tracking-widest py-3 px-8 border border-outline/30 text-white hover:bg-white hover:text-black transition-all"
+    >
+      Get Tickets
+    </a>
+
+  </div>
+</div>
+
+<script define:vars={{ targetDate }}>
+  const TARGET = new Date(targetDate).getTime();
+
+  const el = {
+    days:  document.querySelector('[data-countdown="days"]'),
+    hours: document.querySelector('[data-countdown="hours"]'),
+    mins:  document.querySelector('[data-countdown="mins"]'),
+    secs:  document.querySelector('[data-countdown="secs"]'),
+  };
+
+  function pad(n) {
+    return String(n).padStart(2, "0");
+  }
+
+  function tick() {
+    const diff = TARGET - Date.now();
+
+    if (diff <= 0) {
+      el.days.textContent = el.hours.textContent = el.mins.textContent = el.secs.textContent = "00";
+      return;
+    }
+
+    el.days.textContent  = pad(Math.floor(diff / 86400000));
+    el.hours.textContent = pad(Math.floor((diff % 86400000) / 3600000));
+    el.mins.textContent  = pad(Math.floor((diff % 3600000)  / 60000));
+    el.secs.textContent  = pad(Math.floor((diff % 60000)    / 1000));
+  }
+
+  tick();
+  setInterval(tick, 1000);
+</script>

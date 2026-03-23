@@ -9,10 +9,10 @@ export const gigs = [
   {
     id: 1,
     date: "2026-04-12",
-    venue: "Club Name",
-    city: "Málaga",
-    country: "Spain",
-    ticketUrl: "https://example.com/tickets", // or null if no link
+    venue: "Klub Wyobraźnia",
+    city: "Łódź",
+    country: "Poland",
+    ticketUrl: "#", // replace with real ticket link when available
   },
   {
     id: 2,
