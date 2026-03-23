@@ -6,20 +6,24 @@ import { bio } from "../data/bio.js";
   id="home"
   class="relative min-h-screen flex flex-col justify-center items-start px-8 md:px-24 overflow-hidden"
 >
-  <!-- Background video + gradient overlay -->
-  <div class="absolute inset-0 z-0 overflow-hidden">
+  <!-- Background: gradient left, video right -->
+  <div class="absolute inset-0 z-0">
+    <!-- Gradient overlay spans full width: solid dark on left, fades to transparent on right -->
     <div
-      class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent z-10"
+      class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/80 to-[#0a0a0a]/10 z-10"
     ></div>
-    <video
-      autoplay
-      loop
-      muted
-      playsinline
-      class="w-full h-full object-cover opacity-80"
-    >
-      <source src="/hero-bg.mp4" type="video/mp4" />
-    </video>
+    <!-- Video: right half only, top offset by navbar height (~80px) so DJ's head clears the nav -->
+    <div class="absolute right-0 top-20 bottom-0 w-1/2 overflow-hidden hidden md:block">
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="w-full h-full object-cover opacity-80"
+      >
+        <source src="/hero-bg.mp4" type="video/mp4" />
+      </video>
+    </div>
   </div>
 
   <!-- Main content — animate-hero staggers children on load -->
