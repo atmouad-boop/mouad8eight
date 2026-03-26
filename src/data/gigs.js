@@ -8,7 +8,7 @@
 export const gigs = [
   {
     id: 1,
-    date: "2026-04-12",
+    date: "2026-05-12",
     venue: "Klub Wyobraźnia",
     city: "Łódź",
     country: "Poland",
@@ -21,5 +21,13 @@ export const gigs = [
     city: "Łódź",
     country: "Poland",
     ticketUrl: null,
+  },
+   {
+    id: 3,
+    date: "2026-08-12",
+    venue: "Klub Scenografia",
+    city: "Łódź",
+    country: "Poland",
+    ticketUrl: "#", // replace with real ticket link when available
   },
 ];
