@@ -10,12 +10,12 @@
 export const gallery = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1540039155733-5bb30b4f9e56?auto=format&fit=crop&w=800&q=80",
+    src: "/images/portfolio-gig1.jpg",
     alt: "Concert crowd at a festival",
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+    src: "/images/portfolio-gig2.jpg",
     alt: "DJ at the mixing console",
   },
   {
