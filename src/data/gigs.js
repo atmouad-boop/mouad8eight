@@ -22,12 +22,4 @@ export const gigs = [
     country: "Poland",
     ticketUrl: null,
   },
-   {
-    id: 3,
-    date: "2026-08-12",
-    venue: "Klub Scenografia",
-    city: "Łódź",
-    country: "Poland",
-    ticketUrl: "#", // replace with real ticket link when available
-  },
 ];
