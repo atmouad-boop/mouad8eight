@@ -20,12 +20,12 @@ export const gallery = [
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80",
+    src: "/images/hells-kitchen.jpeg",
     alt: "Artist with headphones in a dark studio",
   },
   {
     id: 4,
-    src: "public/images/p29-set.jpg",
+    src: "/images/p29-set.jpg",
     alt: "Concert stage with dramatic lighting",
   },
   {
