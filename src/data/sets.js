@@ -22,6 +22,6 @@ export const sets = [
     city: "Lodz",
     date: "2026-02-15",
     genre: "RAP-HIPHOP",
-    videoId: "0C2mGRz3bag,
+    videoId: "0C2mGRz3bag",
   },
 ];
