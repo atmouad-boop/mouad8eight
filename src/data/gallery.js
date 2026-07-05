@@ -20,7 +20,7 @@ export const gallery = [
   },
   {
     id: 3,
-    src: "/images/hells-kitchen.jpeg",
+    src: "/images/hells-kitchen.jpg",
     alt: "Artist with headphones in a dark studio",
   },
   {
