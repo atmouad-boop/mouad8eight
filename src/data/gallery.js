@@ -25,7 +25,7 @@ export const gallery = [
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1501386761651-a7e0bf1ac77b?auto=format&fit=crop&w=800&q=80",
+    src: "public/images/p29-set",
     alt: "Concert stage with dramatic lighting",
   },
   {
@@ -40,7 +40,7 @@ export const gallery = [
   },
   {
     id: 7,
-    src: "https://images.unsplash.com/photo-1504983359714-f22ae68ac73e?auto=format&fit=crop&w=800&q=80",
+    src: "/images/fuzja set",
     alt: "Live music performance",
   },
 ];
