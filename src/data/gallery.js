@@ -25,7 +25,7 @@ export const gallery = [
   },
   {
     id: 4,
-    src: "public/images/p29-set",
+    src: "public/images/p29-set.jpg",
     alt: "Concert stage with dramatic lighting",
   },
   {
@@ -40,7 +40,7 @@ export const gallery = [
   },
   {
     id: 7,
-    src: "/images/fuzja set",
+    src: "/images/fuzja-set.jpg",
     alt: "Live music performance",
   },
 ];
